@@ -1,0 +1,82 @@
+import 'package:flutter/material.dart';
+
+
+class Group1Widget extends StatelessWidget {
+          @override
+          Widget build(BuildContext context) {
+          Figma Flutter Generator Group1Widget - GROUP
+            return Container(
+      width: 128,
+      height: 18,
+      
+      child: Stack(
+        children: <Widget>[
+          Positioned(
+        top: 0,
+        left: 0,
+        child: null
+      ),Positioned(
+        top: 0,
+        left: 97,
+        child: Container(
+      decoration: BoxDecoration(
+          borderRadius : BorderRadius.only(
+            topLeft: Radius.circular(12),
+            topRight: Radius.circular(12),
+            bottomLeft: Radius.circular(12),
+            bottomRight: Radius.circular(12),
+          ),
+      color : Color.fromRGBO(238, 31, 96, 1),
+  ),
+      padding: EdgeInsets.symmetric(horizontal: 4, vertical: 1),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        
+        children: <Widget>[
+          Text('99+', textAlign: TextAlign.center, style: TextStyle(
+        color: Color.fromRGBO(255, 255, 255, 1),
+        fontFamily: 'Pretendard',
+        fontSize: 12,
+        letterSpacing: -0.30000001192092896,
+        fontWeight: FontWeight.normal,
+        height: 1.3333333333333333
+      ),),
+
+        ],
+      ),
+    )
+      ),Positioned(
+        top: 0,
+        left: 46,
+        child: Container(
+      decoration: BoxDecoration(
+          borderRadius : BorderRadius.only(
+            topLeft: Radius.circular(10),
+            topRight: Radius.circular(10),
+            bottomLeft: Radius.circular(10),
+            bottomRight: Radius.circular(10),
+          ),
+      color : Color.fromRGBO(238, 31, 96, 1),
+  ),
+      padding: EdgeInsets.symmetric(horizontal: 4, vertical: 1),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        
+        children: <Widget>[Text('20', textAlign: TextAlign.center, style: TextStyle(
+        color: Color.fromRGBO(255, 255, 255, 1),
+        fontFamily: 'Pretendard',
+        fontSize: 12,
+        letterSpacing: -0.30000001192092896,
+        fontWeight: FontWeight.normal,
+        height: 1.3333333333333333
+      ),),
+],
+      ),
+    )
+      ),
+        ]
+      )
+    );
+          }
+        }
+        

@@ -1,0 +1,164 @@
+name: design_system
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.1 <3.0.0"
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^1.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/location.png
+    - assets/images/badge_leafgreen.png
+    - assets/images/badge_sunsetpink.png
+    - assets/images/badge_green.png
+    - assets/images/badge_red.png
+    - assets/images/badge_blue.png
+    - assets/images/badge_cyan.png
+    - assets/images/badge_orange.png
+    - assets/images/badge_purple.png
+    - assets/images/badge_aquablue.png
+    - assets/images/badge_overlay.png
+    - assets/images/solid_overlay.png
+    - assets/images/solid_default.png
+    - assets/images/solid_purple.png
+    - assets/images/close_icon.png
+    - assets/images/close_icon_2.png
+    - assets/images/close_icon_3.png
+    - assets/images/close_icon_4.png
+    - assets/images/grad_icon.png
+    - assets/images/grad_icon_selected.png
+    - assets/images/grad_icon_disabled.png
+    - assets/images/close_icon_small.png
+    - assets/images/close_icon_2_small.png
+    - assets/images/close_icon_3_small.png
+    - assets/images/close_icon_4_small.png
+    - assets/images/grad_icon_small.png
+    - assets/images/grad_icon_selected_small.png
+    - assets/images/grad_icon_disabled_small.png
+    - assets/images/sort_down.png
+    - assets/images/sort_down_white.png
+    - assets/images/sort_down_disabled.png
+    - assets/images/sort_down_small.png
+    - assets/images/sort_down_white_small.png
+    - assets/images/sort_down_disabled_small.png
+    - assets/images/zzim_fill.png
+    - assets/images/zzim_fill_black.png
+    - assets/images/zzim_fill_disabled.png
+    - assets/images/zzim_fill_small.png
+    - assets/images/zzim_fill_black_small.png
+    - assets/images/zzim_fill_disabled_small.png
+    - assets/images/tooltip_close.png
+    - assets/images/fab_add_disabled.png
+    - assets/images/fab_add_pink.png
+    - assets/images/fab_add_small_disabled.png
+    - assets/images/fab_add_small_pink.png
+    - assets/images/fab_add_small.png
+    - assets/images/fab_add.png
+    - assets/images/fab_close_disabled.png
+    - assets/images/fab_close_pink.png
+    - assets/images/fab_close_small_disabled.png
+    - assets/images/fab_close_small_pink.png
+    - assets/images/fab_close_small.png
+    - assets/images/fab_close.png
+    - assets/images/info_icon.png
+    - assets/images/checked_icon.png
+    - assets/images/misuse_icon.png
+    - assets/images/loading_icon.png
+    - assets/images/snackbar_close.png
+    - assets/images/add_cart_big.png
+    - assets/images/cart.png
+    - assets/images/close_alt_fill.png
+    - assets/images/zzim_fill_big.png
+    - assets/images/input_clear.png
+    - assets/images/input_complete.png
+    - assets/images/input_warning.png
+    - assets/images/input_prefix_man.png
+    - assets/images/input_prefix_man_disabled.png
+    - assets/images/input_view.png
+    - assets/images/input_view_disabled.png
+    - assets/images/input_view_off.png
+    - assets/images/input_view_off_disabled.png
+    - assets/images/input_select.png
+    - assets/images/input_select_disabled.png
+
+
+
+
+  #   - images/a_dot_ham.jpeg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
