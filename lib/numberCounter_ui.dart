@@ -12,38 +12,82 @@ class _NumberCounterStyleState extends State<NumberCounterStyle> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Container(
-            padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-            decoration: BoxDecoration(
-                color: Color.fromARGB(255, 192, 178, 178),
-                borderRadius: BorderRadius.circular(10)),
-            child: Row(
-              children: <Widget>[
-                IconButton(
-                  icon: const Icon(Icons.add),
-                  onPressed: () {
-                    setState(() {
-                      _count += 1;
-                    });
-                  },
-                ),
-                Text(_count.toString()),
-                IconButton(
-                  icon: const Icon(Icons.remove),
-                  onPressed: () {
-                    setState(() {
-                      _count -= 1;
-                    });
-                  },
-                ),
-              ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Number Counter Style"),
+      ),
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Color(0xffeaecf5)),
+                borderRadius: BorderRadius.circular(6),
+                color: Colors.white,
+              ),
+              child: Row(
+                children: <Widget>[
+                  Container(
+                    width: 34,
+                    height: 32,
+                    clipBehavior: Clip.hardEdge,
+                    decoration: BoxDecoration(
+                      border:
+                          Border(right: BorderSide(color: Color(0xffeaecf5))),
+                    ),
+                    child: IconButton(
+                      icon: const Icon(
+                        Icons.remove,
+                        size: 16,
+                        color: Color(0xffbabad4),
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          _count -= 1;
+                        });
+                      },
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.symmetric(horizontal: 19.5),
+                    height: 32,
+                    alignment: Alignment.center,
+                    child: Text(
+                      _count.toString(),
+                      style: TextStyle(
+                        fontSize: 16,
+                        height: 1.25,
+                        color: Color(0xff191923),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 34,
+                    height: 32,
+                    clipBehavior: Clip.hardEdge,
+                    decoration: BoxDecoration(
+                      border:
+                          Border(left: BorderSide(color: Color(0xffeaecf5))),
+                    ),
+                    child: IconButton(
+                      icon: const Icon(
+                        Icons.add,
+                        size: 16,
+                        color: Color(0xff191923),
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          _count += 1;
+                        });
+                      },
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

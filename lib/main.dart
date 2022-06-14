@@ -8,18 +8,21 @@ import 'radioButton_ui.dart';
 import 'switch_ui.dart';
 import 'numberCounter_ui.dart';
 import 'snackBar_ui.dart';
-import 'textField_ui.dart';
+import 'input_ui.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MaterialApp(
+      title: 'Navigation Basics',
+      home: DesignSystem(),
+    ));
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+class DesignSystem extends StatefulWidget {
+  const DesignSystem({Key? key}) : super(key: key);
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<DesignSystem> createState() => _DesignSystemState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _DesignSystemState extends State<DesignSystem> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,17 +31,201 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: Text('DESIGN SYSTEM'),
         ),
-        body:
-            // ChipStyle(),
-            // BadgeStyle(),
-            // TooltipStyle(),
-            // FabStyle(),
-            // RadioBtnStyle(),
-            // CheckBoxStyle(),
-            // SwitchStyle(),
-            // NumberCounterStyle(),
-            // SnackBarStyle(),
-            TextFieldStyle(),
+        body: ListView(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ChipStyle()),
+                  );
+                },
+                child: Text(
+                  'Chip',
+                  style: TextStyle(
+                    fontSize: 18,
+                    height: 2.5,
+                    leadingDistribution: TextLeadingDistribution.even,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => BadgeStyle()),
+                  );
+                },
+                child: Text(
+                  'Badge',
+                  style: TextStyle(
+                    fontSize: 18,
+                    height: 2.5,
+                    leadingDistribution: TextLeadingDistribution.even,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TooltipStyle()),
+                  );
+                },
+                child: Text(
+                  'Tooltip',
+                  style: TextStyle(
+                    fontSize: 18,
+                    height: 2.5,
+                    leadingDistribution: TextLeadingDistribution.even,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => FabStyle()),
+                  );
+                },
+                child: Text(
+                  'FAB',
+                  style: TextStyle(
+                    fontSize: 18,
+                    height: 2.5,
+                    leadingDistribution: TextLeadingDistribution.even,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RadioBtnStyle()),
+                  );
+                },
+                child: Text(
+                  'Radio Button',
+                  style: TextStyle(
+                    fontSize: 18,
+                    height: 2.5,
+                    leadingDistribution: TextLeadingDistribution.even,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CheckBoxStyle()),
+                  );
+                },
+                child: Text(
+                  'Check Box',
+                  style: TextStyle(
+                    fontSize: 18,
+                    height: 2.5,
+                    leadingDistribution: TextLeadingDistribution.even,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SwitchStyle()),
+                  );
+                },
+                child: Text(
+                  'Switch',
+                  style: TextStyle(
+                    fontSize: 18,
+                    height: 2.5,
+                    leadingDistribution: TextLeadingDistribution.even,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => NumberCounterStyle()),
+                  );
+                },
+                child: Text(
+                  'Number Counter',
+                  style: TextStyle(
+                    fontSize: 18,
+                    height: 2.5,
+                    leadingDistribution: TextLeadingDistribution.even,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SnackBarStyle()),
+                  );
+                },
+                child: Text(
+                  'Snackbar',
+                  style: TextStyle(
+                    fontSize: 18,
+                    height: 2.5,
+                    leadingDistribution: TextLeadingDistribution.even,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => InputStyle()),
+                  );
+                },
+                child: Text(
+                  'Input(Textfield)',
+                  style: TextStyle(
+                    fontSize: 18,
+                    height: 2.5,
+                    leadingDistribution: TextLeadingDistribution.even,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

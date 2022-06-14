@@ -10,371 +10,376 @@ class TooltipStyle extends StatefulWidget {
 class _TooltipStyleState extends State<TooltipStyle> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: ListView(
-        children: [
-          // case 1)
-          Container(
-            padding: EdgeInsets.all(64),
-            alignment: Alignment.center,
-            child: Tooltip(
-              message: 'Type Something.',
-              child: Text(
-                'case1) 마우스를 올리면 툴팁이 보입니다.',
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Tooltip Style"),
+      ),
+      body: Center(
+        child: ListView(
+          children: [
+            // case 1)
+            Container(
+              padding: EdgeInsets.all(64),
+              alignment: Alignment.center,
+              child: Tooltip(
+                message: 'Type Something.',
+                child: Text(
+                  'case1) 마우스를 올리면 툴팁이 보입니다.',
+                ),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: Color(0xFF191923).withOpacity(0.74),
+                ),
+                padding: EdgeInsets.fromLTRB(16, 11, 16, 11),
+                textStyle: TextStyle(
+                  fontSize: 14,
+                  height: 1.3,
+                  color: Color(0xffffffff),
+                  leadingDistribution: TextLeadingDistribution.even,
+                ),
+                verticalOffset: 24, // 툴팁과 텍스트 사이 거리 조정
               ),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                color: Color(0xFF191923).withOpacity(0.74),
-              ),
-              padding: EdgeInsets.fromLTRB(16, 11, 16, 11),
-              textStyle: TextStyle(
-                fontSize: 14,
-                height: 1.3,
-                color: Color(0xffffffff),
-                leadingDistribution: TextLeadingDistribution.even,
-              ),
-              verticalOffset: 24, // 툴팁과 텍스트 사이 거리 조정
             ),
-          ),
 
-          //case 2)
-          Container(
-            padding: EdgeInsets.all(64),
-            alignment: Alignment.center,
-            child: Tooltip(
-              verticalOffset: 24, // 툴팁과 텍스트 사이 거리 조정
-              padding: EdgeInsets.fromLTRB(16, 0, 10, 0),
-              showDuration: const Duration(seconds: 999999),
-              waitDuration: const Duration(seconds: 999999),
-              triggerMode: TooltipTriggerMode.tap,
-              richMessage: TextSpan(
-                children: [
-                  WidgetSpan(
-                    alignment: PlaceholderAlignment.middle,
-                    child: Container(
-                        padding: EdgeInsets.fromLTRB(0, 11, 0, 11),
-                        child: Text(
-                          'Type Something',
-                          style: TextStyle(
-                            fontSize: 14,
-                            height: 1.3,
-                            color: Color(0xffffffff),
-                            leadingDistribution: TextLeadingDistribution.even,
-                          ),
-                        )),
-                  ),
-                  WidgetSpan(
-                    alignment: PlaceholderAlignment.middle,
-                    child: Container(
-                      padding: EdgeInsets.fromLTRB(4, 10, 0, 10),
-                      child: Image.asset(
-                        'assets/images/tooltip_close.png',
-                        width: 20,
-                        height: 20,
+            //case 2)
+            Container(
+              padding: EdgeInsets.all(64),
+              alignment: Alignment.center,
+              child: Tooltip(
+                verticalOffset: 24, // 툴팁과 텍스트 사이 거리 조정
+                padding: EdgeInsets.fromLTRB(16, 0, 10, 0),
+                showDuration: const Duration(seconds: 999999),
+                waitDuration: const Duration(seconds: 999999),
+                triggerMode: TooltipTriggerMode.tap,
+                richMessage: TextSpan(
+                  children: [
+                    WidgetSpan(
+                      alignment: PlaceholderAlignment.middle,
+                      child: Container(
+                          padding: EdgeInsets.fromLTRB(0, 11, 0, 11),
+                          child: Text(
+                            'Type Something',
+                            style: TextStyle(
+                              fontSize: 14,
+                              height: 1.3,
+                              color: Color(0xffffffff),
+                              leadingDistribution: TextLeadingDistribution.even,
+                            ),
+                          )),
+                    ),
+                    WidgetSpan(
+                      alignment: PlaceholderAlignment.middle,
+                      child: Container(
+                        padding: EdgeInsets.fromLTRB(4, 10, 0, 10),
+                        child: Image.asset(
+                          'assets/images/tooltip_close.png',
+                          width: 20,
+                          height: 20,
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              child: Text('case2) 탭하면 툴팁이 보입니다.'),
-              decoration: ShapeDecoration(
-                color: Color(0xFF191923).withOpacity(0.74),
-                shape: TooltipShapeBorder(radius: 8, arrowHeight: 0),
+                  ],
+                ),
+                child: Text('case2) 탭하면 툴팁이 보입니다.'),
+                decoration: ShapeDecoration(
+                  color: Color(0xFF191923).withOpacity(0.74),
+                  shape: TooltipShapeBorder(radius: 8, arrowHeight: 0),
+                ),
               ),
             ),
-          ),
 
-          //case 3)
-          Container(
-            padding: EdgeInsets.all(64),
-            alignment: Alignment.center,
-            child: Tooltip(
-              verticalOffset: 24, // 툴팁과 텍스트 사이 거리 조정
-              padding: EdgeInsets.fromLTRB(16, 0, 10, 0),
-              showDuration: const Duration(seconds: 999999),
-              waitDuration: const Duration(seconds: 999999),
-              triggerMode: TooltipTriggerMode.tap,
-              richMessage: TextSpan(
-                children: [
-                  WidgetSpan(
-                    alignment: PlaceholderAlignment.middle,
-                    child: Container(
-                        padding: EdgeInsets.fromLTRB(0, 11, 0, 11),
-                        child: Text(
-                          'Type Something',
-                          style: TextStyle(
-                            fontSize: 14,
-                            height: 1.3,
-                            color: Color(0xffffffff),
-                            leadingDistribution: TextLeadingDistribution.even,
-                          ),
-                        )),
-                  ),
-                  WidgetSpan(
-                    alignment: PlaceholderAlignment.middle,
-                    child: Container(
-                      padding: EdgeInsets.fromLTRB(4, 10, 0, 10),
-                      child: Image.asset(
-                        'assets/images/tooltip_close.png',
-                        width: 20,
-                        height: 20,
+            //case 3)
+            Container(
+              padding: EdgeInsets.all(64),
+              alignment: Alignment.center,
+              child: Tooltip(
+                verticalOffset: 24, // 툴팁과 텍스트 사이 거리 조정
+                padding: EdgeInsets.fromLTRB(16, 0, 10, 0),
+                showDuration: const Duration(seconds: 999999),
+                waitDuration: const Duration(seconds: 999999),
+                triggerMode: TooltipTriggerMode.tap,
+                richMessage: TextSpan(
+                  children: [
+                    WidgetSpan(
+                      alignment: PlaceholderAlignment.middle,
+                      child: Container(
+                          padding: EdgeInsets.fromLTRB(0, 11, 0, 11),
+                          child: Text(
+                            'Type Something',
+                            style: TextStyle(
+                              fontSize: 14,
+                              height: 1.3,
+                              color: Color(0xffffffff),
+                              leadingDistribution: TextLeadingDistribution.even,
+                            ),
+                          )),
+                    ),
+                    WidgetSpan(
+                      alignment: PlaceholderAlignment.middle,
+                      child: Container(
+                        padding: EdgeInsets.fromLTRB(4, 10, 0, 10),
+                        child: Image.asset(
+                          'assets/images/tooltip_close.png',
+                          width: 20,
+                          height: 20,
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              child: Text('case3) 탭하면 툴팁이 보입니다.'),
-              decoration: ShapeDecoration(
-                color: Color(0xFF191923).withOpacity(0.74),
-                shape: TooltipShapeBorder(
-                    radius: 8, arrowHeight: 8, arrowArc: 0.11),
+                  ],
+                ),
+                child: Text('case3) 탭하면 툴팁이 보입니다.'),
+                decoration: ShapeDecoration(
+                  color: Color(0xFF191923).withOpacity(0.74),
+                  shape: TooltipShapeBorder(
+                      radius: 8, arrowHeight: 8, arrowArc: 0.11),
+                ),
               ),
             ),
-          ),
 
-          //case 4)
-          Container(
-            padding: EdgeInsets.all(64),
-            alignment: Alignment.center,
-            child: Tooltip(
-              verticalOffset: 24, // 툴팁과 텍스트 사이 거리 조정
-              padding: EdgeInsets.fromLTRB(16, 0, 10, 0),
-              showDuration: const Duration(seconds: 999999),
-              waitDuration: const Duration(seconds: 999999),
-              triggerMode: TooltipTriggerMode.tap,
-              richMessage: TextSpan(
-                children: [
-                  WidgetSpan(
-                    alignment: PlaceholderAlignment.middle,
-                    child: Container(
-                        padding: EdgeInsets.fromLTRB(0, 11, 0, 11),
-                        child: Text(
-                          'Type Something',
-                          style: TextStyle(
-                            fontSize: 14,
-                            height: 1.3,
-                            color: Color(0xffffffff),
-                            leadingDistribution: TextLeadingDistribution.even,
-                          ),
-                        )),
-                  ),
-                  WidgetSpan(
-                    alignment: PlaceholderAlignment.middle,
-                    child: Container(
-                      padding: EdgeInsets.fromLTRB(4, 10, 0, 10),
-                      child: Image.asset(
-                        'assets/images/tooltip_close.png',
-                        width: 20,
-                        height: 20,
+            //case 4)
+            Container(
+              padding: EdgeInsets.all(64),
+              alignment: Alignment.center,
+              child: Tooltip(
+                verticalOffset: 24, // 툴팁과 텍스트 사이 거리 조정
+                padding: EdgeInsets.fromLTRB(16, 0, 10, 0),
+                showDuration: const Duration(seconds: 999999),
+                waitDuration: const Duration(seconds: 999999),
+                triggerMode: TooltipTriggerMode.tap,
+                richMessage: TextSpan(
+                  children: [
+                    WidgetSpan(
+                      alignment: PlaceholderAlignment.middle,
+                      child: Container(
+                          padding: EdgeInsets.fromLTRB(0, 11, 0, 11),
+                          child: Text(
+                            'Type Something',
+                            style: TextStyle(
+                              fontSize: 14,
+                              height: 1.3,
+                              color: Color(0xffffffff),
+                              leadingDistribution: TextLeadingDistribution.even,
+                            ),
+                          )),
+                    ),
+                    WidgetSpan(
+                      alignment: PlaceholderAlignment.middle,
+                      child: Container(
+                        padding: EdgeInsets.fromLTRB(4, 10, 0, 10),
+                        child: Image.asset(
+                          'assets/images/tooltip_close.png',
+                          width: 20,
+                          height: 20,
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              child: Text('case4) 탭하면 툴팁이 보입니다.'),
-              decoration: ShapeDecoration(
-                color: Color(0xFF191923).withOpacity(0.74),
-                shape: TooltipShapeBorderCenter(
-                    radius: 8, arrowHeight: 8, arrowArc: 0.11),
+                  ],
+                ),
+                child: Text('case4) 탭하면 툴팁이 보입니다.'),
+                decoration: ShapeDecoration(
+                  color: Color(0xFF191923).withOpacity(0.74),
+                  shape: TooltipShapeBorderCenter(
+                      radius: 8, arrowHeight: 8, arrowArc: 0.11),
+                ),
               ),
             ),
-          ),
 
-          //case 5)
-          Container(
-            padding: EdgeInsets.all(64),
-            alignment: Alignment.center,
-            child: Tooltip(
-              verticalOffset: 24, // 툴팁과 텍스트 사이 거리 조정
-              padding: EdgeInsets.fromLTRB(16, 0, 10, 0),
-              showDuration: const Duration(seconds: 999999),
-              waitDuration: const Duration(seconds: 999999),
-              triggerMode: TooltipTriggerMode.tap,
-              richMessage: TextSpan(
-                children: [
-                  WidgetSpan(
-                    alignment: PlaceholderAlignment.middle,
-                    child: Container(
-                        padding: EdgeInsets.fromLTRB(0, 11, 0, 11),
-                        child: Text(
-                          'Type Something',
-                          style: TextStyle(
-                            fontSize: 14,
-                            height: 1.3,
-                            color: Color(0xffffffff),
-                            leadingDistribution: TextLeadingDistribution.even,
-                          ),
-                        )),
-                  ),
-                  WidgetSpan(
-                    alignment: PlaceholderAlignment.middle,
-                    child: Container(
-                      padding: EdgeInsets.fromLTRB(4, 10, 0, 10),
-                      child: Image.asset(
-                        'assets/images/tooltip_close.png',
-                        width: 20,
-                        height: 20,
+            //case 5)
+            Container(
+              padding: EdgeInsets.all(64),
+              alignment: Alignment.center,
+              child: Tooltip(
+                verticalOffset: 24, // 툴팁과 텍스트 사이 거리 조정
+                padding: EdgeInsets.fromLTRB(16, 0, 10, 0),
+                showDuration: const Duration(seconds: 999999),
+                waitDuration: const Duration(seconds: 999999),
+                triggerMode: TooltipTriggerMode.tap,
+                richMessage: TextSpan(
+                  children: [
+                    WidgetSpan(
+                      alignment: PlaceholderAlignment.middle,
+                      child: Container(
+                          padding: EdgeInsets.fromLTRB(0, 11, 0, 11),
+                          child: Text(
+                            'Type Something',
+                            style: TextStyle(
+                              fontSize: 14,
+                              height: 1.3,
+                              color: Color(0xffffffff),
+                              leadingDistribution: TextLeadingDistribution.even,
+                            ),
+                          )),
+                    ),
+                    WidgetSpan(
+                      alignment: PlaceholderAlignment.middle,
+                      child: Container(
+                        padding: EdgeInsets.fromLTRB(4, 10, 0, 10),
+                        child: Image.asset(
+                          'assets/images/tooltip_close.png',
+                          width: 20,
+                          height: 20,
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              child: Text('case5) 탭하면 툴팁이 보입니다.'),
-              decoration: ShapeDecoration(
-                color: Color(0xFF191923).withOpacity(0.74),
-                shape: TooltipShapeBorderRight(
-                    radius: 8, arrowHeight: 8, arrowArc: 0.11),
+                  ],
+                ),
+                child: Text('case5) 탭하면 툴팁이 보입니다.'),
+                decoration: ShapeDecoration(
+                  color: Color(0xFF191923).withOpacity(0.74),
+                  shape: TooltipShapeBorderRight(
+                      radius: 8, arrowHeight: 8, arrowArc: 0.11),
+                ),
               ),
             ),
-          ),
 
-          //case 6)
-          Container(
-            padding: EdgeInsets.all(64),
-            alignment: Alignment.center,
-            child: Tooltip(
-              verticalOffset: 24, // 툴팁과 텍스트 사이 거리 조정
-              preferBelow: false, // 상단에 팁 노출
-              padding: EdgeInsets.fromLTRB(16, 0, 10, 0),
-              showDuration: const Duration(seconds: 999999),
-              waitDuration: const Duration(seconds: 999999),
-              triggerMode: TooltipTriggerMode.tap,
-              richMessage: TextSpan(
-                children: [
-                  WidgetSpan(
-                    alignment: PlaceholderAlignment.middle,
-                    child: Container(
-                        padding: EdgeInsets.fromLTRB(0, 11, 0, 11),
-                        child: Text(
-                          'Type Something',
-                          style: TextStyle(
-                            fontSize: 14,
-                            height: 1.3,
-                            color: Color(0xffffffff),
-                            leadingDistribution: TextLeadingDistribution.even,
-                          ),
-                        )),
-                  ),
-                  WidgetSpan(
-                    alignment: PlaceholderAlignment.middle,
-                    child: Container(
-                      padding: EdgeInsets.fromLTRB(4, 10, 0, 10),
-                      child: Image.asset(
-                        'assets/images/tooltip_close.png',
-                        width: 20,
-                        height: 20,
+            //case 6)
+            Container(
+              padding: EdgeInsets.all(64),
+              alignment: Alignment.center,
+              child: Tooltip(
+                verticalOffset: 24, // 툴팁과 텍스트 사이 거리 조정
+                preferBelow: false, // 상단에 팁 노출
+                padding: EdgeInsets.fromLTRB(16, 0, 10, 0),
+                showDuration: const Duration(seconds: 999999),
+                waitDuration: const Duration(seconds: 999999),
+                triggerMode: TooltipTriggerMode.tap,
+                richMessage: TextSpan(
+                  children: [
+                    WidgetSpan(
+                      alignment: PlaceholderAlignment.middle,
+                      child: Container(
+                          padding: EdgeInsets.fromLTRB(0, 11, 0, 11),
+                          child: Text(
+                            'Type Something',
+                            style: TextStyle(
+                              fontSize: 14,
+                              height: 1.3,
+                              color: Color(0xffffffff),
+                              leadingDistribution: TextLeadingDistribution.even,
+                            ),
+                          )),
+                    ),
+                    WidgetSpan(
+                      alignment: PlaceholderAlignment.middle,
+                      child: Container(
+                        padding: EdgeInsets.fromLTRB(4, 10, 0, 10),
+                        child: Image.asset(
+                          'assets/images/tooltip_close.png',
+                          width: 20,
+                          height: 20,
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              child: Text('case6) 탭하면 툴팁이 보입니다.'),
-              decoration: ShapeDecoration(
-                color: Color(0xFF191923).withOpacity(0.74),
-                shape: TooltipShapeBorderUp(
-                    radius: 8, arrowHeight: 8, arrowArc: 0.11),
+                  ],
+                ),
+                child: Text('case6) 탭하면 툴팁이 보입니다.'),
+                decoration: ShapeDecoration(
+                  color: Color(0xFF191923).withOpacity(0.74),
+                  shape: TooltipShapeBorderUp(
+                      radius: 8, arrowHeight: 8, arrowArc: 0.11),
+                ),
               ),
             ),
-          ),
 
-          //case 7)
-          Container(
-            padding: EdgeInsets.all(64),
-            alignment: Alignment.center,
-            child: Tooltip(
-              verticalOffset: 24, // 툴팁과 텍스트 사이 거리 조정
-              preferBelow: false, // 상단에 팁 노출
-              padding: EdgeInsets.fromLTRB(16, 0, 10, 0),
-              showDuration: const Duration(seconds: 999999),
-              waitDuration: const Duration(seconds: 999999),
-              triggerMode: TooltipTriggerMode.tap,
-              richMessage: TextSpan(
-                children: [
-                  WidgetSpan(
-                    alignment: PlaceholderAlignment.middle,
-                    child: Container(
-                        padding: EdgeInsets.fromLTRB(0, 11, 0, 11),
-                        child: Text(
-                          'Type Something',
-                          style: TextStyle(
-                            fontSize: 14,
-                            height: 1.3,
-                            color: Color(0xffffffff),
-                            leadingDistribution: TextLeadingDistribution.even,
-                          ),
-                        )),
-                  ),
-                  WidgetSpan(
-                    alignment: PlaceholderAlignment.middle,
-                    child: Container(
-                      padding: EdgeInsets.fromLTRB(4, 10, 0, 10),
-                      child: Image.asset(
-                        'assets/images/tooltip_close.png',
-                        width: 20,
-                        height: 20,
+            //case 7)
+            Container(
+              padding: EdgeInsets.all(64),
+              alignment: Alignment.center,
+              child: Tooltip(
+                verticalOffset: 24, // 툴팁과 텍스트 사이 거리 조정
+                preferBelow: false, // 상단에 팁 노출
+                padding: EdgeInsets.fromLTRB(16, 0, 10, 0),
+                showDuration: const Duration(seconds: 999999),
+                waitDuration: const Duration(seconds: 999999),
+                triggerMode: TooltipTriggerMode.tap,
+                richMessage: TextSpan(
+                  children: [
+                    WidgetSpan(
+                      alignment: PlaceholderAlignment.middle,
+                      child: Container(
+                          padding: EdgeInsets.fromLTRB(0, 11, 0, 11),
+                          child: Text(
+                            'Type Something',
+                            style: TextStyle(
+                              fontSize: 14,
+                              height: 1.3,
+                              color: Color(0xffffffff),
+                              leadingDistribution: TextLeadingDistribution.even,
+                            ),
+                          )),
+                    ),
+                    WidgetSpan(
+                      alignment: PlaceholderAlignment.middle,
+                      child: Container(
+                        padding: EdgeInsets.fromLTRB(4, 10, 0, 10),
+                        child: Image.asset(
+                          'assets/images/tooltip_close.png',
+                          width: 20,
+                          height: 20,
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              child: Text('case7) 탭하면 툴팁이 보입니다.'),
-              decoration: ShapeDecoration(
-                color: Color(0xFF191923).withOpacity(0.74),
-                shape: TooltipShapeBorderCenterUp(
-                    radius: 8, arrowHeight: 8, arrowArc: 0.11),
+                  ],
+                ),
+                child: Text('case7) 탭하면 툴팁이 보입니다.'),
+                decoration: ShapeDecoration(
+                  color: Color(0xFF191923).withOpacity(0.74),
+                  shape: TooltipShapeBorderCenterUp(
+                      radius: 8, arrowHeight: 8, arrowArc: 0.11),
+                ),
               ),
             ),
-          ),
 
-          //case 8)
-          Container(
-            padding: EdgeInsets.all(64),
-            alignment: Alignment.center,
-            child: Tooltip(
-              verticalOffset: 24, // 툴팁과 텍스트 사이 거리 조정
-              preferBelow: false, // 상단에 팁 노출
-              padding: EdgeInsets.fromLTRB(16, 0, 10, 0),
-              showDuration: const Duration(seconds: 999999),
-              waitDuration: const Duration(seconds: 999999),
-              triggerMode: TooltipTriggerMode.tap,
-              richMessage: TextSpan(
-                children: [
-                  WidgetSpan(
-                    alignment: PlaceholderAlignment.middle,
-                    child: Container(
-                        padding: EdgeInsets.fromLTRB(0, 11, 0, 11),
-                        child: Text(
-                          'Type Something',
-                          style: TextStyle(
-                            fontSize: 14,
-                            height: 1.3,
-                            color: Color(0xffffffff),
-                            leadingDistribution: TextLeadingDistribution.even,
-                          ),
-                        )),
-                  ),
-                  WidgetSpan(
-                    alignment: PlaceholderAlignment.middle,
-                    child: Container(
-                      padding: EdgeInsets.fromLTRB(4, 10, 0, 10),
-                      child: Image.asset(
-                        'assets/images/tooltip_close.png',
-                        width: 20,
-                        height: 20,
+            //case 8)
+            Container(
+              padding: EdgeInsets.all(64),
+              alignment: Alignment.center,
+              child: Tooltip(
+                verticalOffset: 24, // 툴팁과 텍스트 사이 거리 조정
+                preferBelow: false, // 상단에 팁 노출
+                padding: EdgeInsets.fromLTRB(16, 0, 10, 0),
+                showDuration: const Duration(seconds: 999999),
+                waitDuration: const Duration(seconds: 999999),
+                triggerMode: TooltipTriggerMode.tap,
+                richMessage: TextSpan(
+                  children: [
+                    WidgetSpan(
+                      alignment: PlaceholderAlignment.middle,
+                      child: Container(
+                          padding: EdgeInsets.fromLTRB(0, 11, 0, 11),
+                          child: Text(
+                            'Type Something',
+                            style: TextStyle(
+                              fontSize: 14,
+                              height: 1.3,
+                              color: Color(0xffffffff),
+                              leadingDistribution: TextLeadingDistribution.even,
+                            ),
+                          )),
+                    ),
+                    WidgetSpan(
+                      alignment: PlaceholderAlignment.middle,
+                      child: Container(
+                        padding: EdgeInsets.fromLTRB(4, 10, 0, 10),
+                        child: Image.asset(
+                          'assets/images/tooltip_close.png',
+                          width: 20,
+                          height: 20,
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              child: Text('case8) 탭하면 툴팁이 보입니다.'),
-              decoration: ShapeDecoration(
-                color: Color(0xFF191923).withOpacity(0.74),
-                shape: TooltipShapeBorderRightUp(
-                    radius: 8, arrowHeight: 8, arrowArc: 0.11),
+                  ],
+                ),
+                child: Text('case8) 탭하면 툴팁이 보입니다.'),
+                decoration: ShapeDecoration(
+                  color: Color(0xFF191923).withOpacity(0.74),
+                  shape: TooltipShapeBorderRightUp(
+                      radius: 8, arrowHeight: 8, arrowArc: 0.11),
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
